@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ScrollView
+            android:id="@+id/articleModeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/articleMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    class="com.google.android.gms.maps.SupportMapFragment" />
+
+                <!--
+                <View
+                    android:id="@+id/mapCoverEmptyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"/>
+                -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/articleDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textAlignment="textStart"
+                        android:textColor="#777777"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/articleTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textAlignment="textEnd"
+                        android:text="@string/app_name"
+                        android:textColor="#777777"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#EEEEEE" />
+                <ImageView
+                    android:id="@+id/articleImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:background="#EEEEEE" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE" />
+                <TextView
+                    android:id="@+id/articleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#777777"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goMainFabInArticlePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        fab:fab_icon="@drawable/ic_arrow_back_24dp"
+        fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/white_pressed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rcmdFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        fab:fab_icon="@drawable/ic_star_black_24dp"
+        fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/white_pressed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"/>
+
+</RelativeLayout>
